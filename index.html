@@ -12,38 +12,36 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/popup.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="assets/javascripts/parallax.js"></script>
-	<script src="assets/javascripts/contact.js"></script>
-	<script src="assets/javascripts/index.js"></script>
-	<script src="assets/javascripts/popup.js"></script>
+	<script src="assets/javascripts/prototype.js"></script>
 </head>
 <body>
 	<!-- navbar -->
 	<div class="index-top">
 		<button onclick="showMenu()" id="toggle" class="toggle button"><i class="fa fa-home fa-fw fa-2x" aria-hidden="true"></i></button>
 		<div class="menu-item" id="menu-item">
-			<a class="item-button item-home" onclick="indexdiv()" href="index.html#div-1">Home</a>
-			<a class="item-button" onclick="aboutdiv()" href="index.html#div-2">About</a>
-			<a class="item-button" onclick="contactdiv()" href="index.html#div-3">Contact</a>
+			<a class="item-button item-home" id="homeClick">Home</a>
+			<a class="item-button" id="aboutClick" >About</a>
+			<a class="item-button" id="contactClick" >Contact</a>
 		</div>
 	</div>
 	<!-- header -->
 	<div id="div-1">
 		<header class="container-1">
-			<a class="item-button" onclick="login()">Login</a>
+			<a class="item-button" id="loginClick">Login</a>
 			<h1 class="jumbo">START PAGE</h1>
 			<p class="paragraph"><input type="text" class="jumbo" id="user" ></p>
 			<div><img id="myImage" src="assets/images/pic_bulboff.gif" width="100" height="180"></div>
-			<button onclick="changeImage()" class="button">Click Me</button>
+			<button id="changeImage" class="button">Click Me</button>
 			<!-- login-part -->
 			<div  id="box" class="box" style="display: none">
 				<h2>Login</h2>
 				<form id="login-form" >
 					<div class="inputBox">
-						<input id="username" type="text" name="" required="required">
+						<input id="username" type="text" name="username" required="required">
 						<label>username</label>
 					</div>
 					<div class="inputBox">
-						<input type="text" name="" required="required">
+						<input type="text" name="password" required="required">
 						<label>password</label>
 					</div>
 					<input type="submit" name="" value="submit">
@@ -132,12 +130,12 @@
 	<!-- contact page -->
 	<div id="div-3" style="display: none">
 		<div class="image">
-			<center><img class="mySlides" src="assets/images/slider1.jpg"></center>
-			<center><img style="display:none" class="mySlides" src="assets/images/slider2.jpeg"></center>
-			<center><img style="display:none" class="mySlides" src="assets/images/slider3.jpeg"></center>
+			<img style="display:none" class="mySlides" src="assets/images/slider1.jpg">
+			<img style="display:none" class="mySlides" src="assets/images/slider2.jpeg">
+			<img style="display:none" class="mySlides" src="assets/images/slider3.jpeg">
 		</div>
-		<button class="left-slider slider-button" onclick="plusDivs(-1)">❮</button>
-		<button class="right-slider slider-button" onclick="plusDivs(+1)">❯</button>
+		<button class="left-slider slider-button" id="minusDivs">❮</button>
+		<button class="right-slider slider-button" id="plusDivs">❯</button>
 		<div class="container-3">
 			<form action="#">
 				<label for="fname">First Name</label>
@@ -183,3 +181,8 @@
 	</footer>
 </body>
 </html>
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		var Def = new IND.Def();
+	});
+</script>

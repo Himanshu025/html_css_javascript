@@ -21,19 +21,34 @@
 	<div class="index-top">
 		<button onclick="showMenu()" id="toggle" class="toggle button"><i class="fa fa-home fa-fw fa-2x" aria-hidden="true"></i></button>
 		<div class="menu-item" id="menu-item">
-			<a class="item-button item-home" href="index.html#div-1">Home</a>
-			<a class="item-button" href="index.html#div-2">About</a>
-			<a class="item-button" href="index.html#div-3">Contact</a>
-			<a class="item-button" onclick="login()">Login</a>
+			<a class="item-button item-home" onclick="indexdiv()" href="index.html#div-1">Home</a>
+			<a class="item-button" onclick="aboutdiv()" href="index.html#div-2">About</a>
+			<a class="item-button" onclick="contactdiv()" href="index.html#div-3">Contact</a>
 		</div>
 	</div>
 	<!-- header -->
 	<div id="div-1">
 		<header class="container-1">
+			<a class="item-button" onclick="login()">Login</a>
 			<h1 class="jumbo">START PAGE</h1>
 			<p class="paragraph"><input type="text" class="jumbo" id="user" ></p>
 			<div><img id="myImage" src="assets/images/pic_bulboff.gif" width="100" height="180"></div>
 			<button onclick="changeImage()" class="button">Click Me</button>
+			<!-- login-part -->
+			<div  id="box" class="box" style="display: none">
+				<h2>Login</h2>
+				<form id="login-form" >
+					<div class="inputBox">
+						<input id="username" type="text" name="" required="required">
+						<label>username</label>
+					</div>
+					<div class="inputBox">
+						<input type="text" name="" required="required">
+						<label>password</label>
+					</div>
+					<input type="submit" name="" value="submit">
+				</form>
+			</div>
 		</header>
 		<!-- First Grid -->
 		<div class="first-grid ">
@@ -70,101 +85,86 @@
 			</div>
 		</div>
 	</div>
-  <!-- about page -->
-  <div id="div-2">
-  	<div class="wrapper-row2">
-		<div id="container" class="clear">
-			<div id="about-us" class="clear">
-				<section id="about-intro" class="clear">
-					<center><h2>About Us</h2></center>
-					<p>In sed neque id libero pretium luctus. Vivamus faucibus. Ut vitae elit. In hac habitasse platea dictumst. Proin et nisl ac orci tempus luctus. Aenean lacinia justo at nisi. Vestibulum sed eros sit amet nisl lobortis commodo. Suspendisse nulla. Vivamus ac lorem. Aliquam pulvinar purus at felis. Quisque convallis nulla id ipsum. Praesent vitae urna. Fusce blandit nunc nec mi. Praesent vestibulum hendrerit ante.
+	<!-- about page -->
+	<div id="div-2" style="display: none">
+		<div class="wrapper-row2">
+			<div id="container" class="clear">
+				<div id="about-us" class="clear">
+					<section id="about-intro" class="clear">
+						<center><h2>About Us</h2></center>
+						<p>In sed neque id libero pretium luctus. Vivamus faucibus. Ut vitae elit. In hac habitasse platea dictumst. Proin et nisl ac orci tempus luctus. Aenean lacinia justo at nisi. Vestibulum sed eros sit amet nisl lobortis commodo. Suspendisse nulla. Vivamus ac lorem. Aliquam pulvinar purus at felis. Quisque convallis nulla id ipsum. Praesent vitae urna. Fusce blandit nunc nec mi. Praesent vestibulum hendrerit ante.
 						In sed neque id libero pretium luctus. Vivamus faucibus. Ut vitae elit. In hac habitasse platea dictumst. Proin et nisl ac orci tempus luctus. Aenean lacinia justo at nisi. Vestibulum sed eros sit amet nisl lobortis commodo. Suspendisse nulla. Vivamus ac lorem. Aliquam pulvinar purus at felis. Quisque convallis nulla id ipsum. Praesent vitae urna. Fusce blandit nunc nec mi. Praesent vestibulum hendrerit ante</p>
-          <div class="parallax" data-parallax="scroll" data-image-src="assets/images/parallax.jpg">
-          <h1 class="info">Work Hard! Play Hard!</h1>
-          </div>
-					<p>Vivamus accumsan. Donec molestie pede vel urna. Curabitur eget sem ornare felis gravida vestibulum.Sed pulvinar, tellus in venenatis vehicula, lorem magna dignissim erat, in accumsan ante lorem sit amet lorem.</p>
-				</section>
-				<section id="team">
-					<h2>Our Team</h2>
-					<ul class="clear">
-						<li class="one-third first">
-							<figure><img src="assets/images/messi.png" alt="">
-								<figcaption>
-									<p class="team-name">Lionel Messi</p>
-									<p class="team-title">Footballer</p>
-									<p class="team-description">Andrés "Leo" Messi Cuccittini is an Argentine professional footballer who plays as a forward for Spanish club Barcelona and the Argentina national team.s</p>
-								</figcaption>
-							</figure>
-						</li>
-						<div class="parallax" data-parallax="scroll" data-image-src="assets/images/parallax2.jpg">
-              <h1 class="info1">Life Is Worth Living!</h1>
-            </div>
-						<li class="one-third">
-							<figure><img src="assets/images/neymar.png" alt="">
-								<figcaption>
-									<p class="team-name">Neymar Jr.</p>
-									<p class="team-title">Footballer</p>
-									<p class="team-description">Neymar da Silva Santos Júnior, commonly known as Neymar or Neymar Jr., is a Brazilian professional footballer who plays as a forward for French club Paris Saint-Germain and the Brazil national team.</p>
-								</figcaption>
-							</figure>
-						</li>
-					</ul>
-				</section>
+						<div class="parallax" data-parallax="scroll" data-image-src="assets/images/parallax.jpg">
+							<h1 class="info">Work Hard! Play Hard!</h1>
+						</div>
+						<p>Vivamus accumsan. Donec molestie pede vel urna. Curabitur eget sem ornare felis gravida vestibulum.Sed pulvinar, tellus in venenatis vehicula, lorem magna dignissim erat, in accumsan ante lorem sit amet lorem.</p>
+					</section>
+					<section id="team">
+						<h2>Our Team</h2>
+						<ul class="clear">
+							<li class="one-third first">
+								<figure><img src="assets/images/messi.png" alt="">
+									<figcaption>
+										<p class="team-name">Lionel Messi</p>
+										<p class="team-title">Footballer</p>
+										<p class="team-description">Andrés "Leo" Messi Cuccittini is an Argentine professional footballer who plays as a forward for Spanish club Barcelona and the Argentina national team.s</p>
+									</figcaption>
+								</figure>
+							</li>
+							<div class="parallax" data-parallax="scroll" data-image-src="assets/images/parallax2.jpg">
+								<h1 class="info1">Life Is Worth Living!</h1>
+							</div>
+							<li class="one-third">
+								<figure><img src="assets/images/neymar.png" alt="">
+									<figcaption>
+										<p class="team-name">Neymar Jr.</p>
+										<p class="team-title">Footballer</p>
+										<p class="team-description">Neymar da Silva Santos Júnior, commonly known as Neymar or Neymar Jr., is a Brazilian professional footballer who plays as a forward for French club Paris Saint-Germain and the Brazil national team.</p>
+									</figcaption>
+								</figure>
+							</li>
+						</ul>
+					</section>
+				</div>
 			</div>
 		</div>
 	</div>
-  </div>
-  <!-- contact page -->
-  <div id="div-3">
-  	<div class="image">
-		<center><img class="mySlides" src="assets/images/slider1.jpg"></center>
-		<center><img style="display:none" class="mySlides" src="assets/images/slider2.jpeg"></center>
-		<center><img style="display:none" class="mySlides" src="assets/images/slider3.jpeg"></center>
-	</div>
-	<button class="left-slider slider-button" onclick="plusDivs(-1)">❮</button>
-	<button class="right-slider slider-button" onclick="plusDivs(+1)">❯</button>
-	<!-- login-part -->
-	<div  id="box" class="box" style="display: none">
-		<h2>Login</h2>
-		<form id="login-form" >
-			<div class="inputBox">
-				<input id="username" type="text" name="" required="required">
-				<label>username</label>
-			</div>
-			<div class="inputBox">
-				<input type="text" name="" required="required">
-				<label>password</label>
-			</div>
-			<input type="submit" name="" value="submit">
-		</form>
-	</div>
-	<div class="container-3">
-		<form action="#">
-			<label for="fname">First Name</label>
-			<input type="text" id="fname" name="firstname" placeholder="Your name..">
-			<label for="lname">Last Name</label>
-			<input type="text" id="lname" name="lastname" placeholder="Your last name..">
-			<label for="country">Country</label>
-			<select id="country" name="country">
-				<option value="india">India</option>
-				<option value="norway">Norway</option>
-				<option value="australia">Australia</option>
-				<option value="canada">Canada</option>
-				<option value="usa">USA</option>
-			</select>
-			<label for="subject">Subject</label>
-			<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-			<input type="submit" value="Submit">
-		</form>
-	</div>
-	<!-- map-div -->
-	<center>
-		<div class="contact-map">
-			<iframe class="iframe" width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDQ4VAAtXpuXvcZk-oQKWljEedR34mWywc&q=Space+Needle,Seattle+WA" allowfullscreen>
-			</iframe>
+	<!-- contact page -->
+	<div id="div-3" style="display: none">
+		<div class="image">
+			<center><img class="mySlides" src="assets/images/slider1.jpg"></center>
+			<center><img style="display:none" class="mySlides" src="assets/images/slider2.jpeg"></center>
+			<center><img style="display:none" class="mySlides" src="assets/images/slider3.jpeg"></center>
 		</div>
-	</center>
-  </div>
+		<button class="left-slider slider-button" onclick="plusDivs(-1)">❮</button>
+		<button class="right-slider slider-button" onclick="plusDivs(+1)">❯</button>
+		<div class="container-3">
+			<form action="#">
+				<label for="fname">First Name</label>
+				<input type="text" id="fname" name="firstname" placeholder="Your name..">
+				<label for="lname">Last Name</label>
+				<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+				<label for="country">Country</label>
+				<select id="country" name="country">
+					<option value="india">India</option>
+					<option value="norway">Norway</option>
+					<option value="australia">Australia</option>
+					<option value="canada">Canada</option>
+					<option value="usa">USA</option>
+				</select>
+				<label for="subject">Subject</label>
+				<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+		<!-- map-div -->
+		<center>
+			<div class="contact-map">
+				<iframe class="iframe" width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDQ4VAAtXpuXvcZk-oQKWljEedR34mWywc&q=Space+Needle,Seattle+WA" allowfullscreen>
+				</iframe>
+			</div>
+		</center>
+	</div>
 	<!-- bottom part -->
 	<div class="bottom-part">
 		<h1 class="quote">Quote of the day: live life</h1>

@@ -53,13 +53,15 @@ label{
   line-height: 1.5;
 }
 .left-slider{
-  position: absolute;
+  position: relative;
   top:600%;
   left: 0%;
+  float: left;
   transform: translate(0%,-50%)
 }
 .right-slider{
-  position: absolute;
+  position: relative;
+  float: right;
   top:600%;
   right: 0%;
   transform: translate(0%,-50%)

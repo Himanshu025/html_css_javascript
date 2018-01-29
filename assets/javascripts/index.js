@@ -6,7 +6,6 @@ function changeImage() {
 		image.src = "assets/images/pic_bulbon.gif";
 	}
 }
-
 function showMenu()
 { 
 	var toggle = document.getElementById('toggle');

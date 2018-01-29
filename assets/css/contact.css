@@ -53,18 +53,21 @@ label{
   line-height: 1.5;
 }
 .left-slider{
-  position: relative;
-  top:600%;
-  left: 0%;
+  position: absolute;
   float: left;
+  top: 28%;
   transform: translate(0%,-50%)
 }
 .right-slider{
-  position: relative;
+  position: absolute;
   float: right;
-  top:600%;
+  top: 28%;
   right: 0%;
   transform: translate(0%,-50%)
+}
+#div-3{
+  background: white!important;
+  z-index: 2!important;
 }
 
 @media screen and (max-width: 479px) {
@@ -85,11 +88,16 @@ label{
     padding-left: 10px;
   }
   .left-slider{
-    position: relative;
+    position: absolute;
+    float: left;
+    top: 20%;
+    left: 0%;
   }
   .right-slider{
-    position: relative;
+    position: absolute;
     float: right;
+    top: 20%;
+    right: 0%;
   }
 }
 
@@ -107,9 +115,14 @@ label{
     padding-left: 80px;
   }
   .left-slider{
-    top:715%;
+    position: absolute;
+    float: left;
+    top: 28%;
   }
   .right-slider{
-    top:715%;
+    position: absolute;
+    float: right;
+    top: 28%;
+    right: 0%;
   }
 }

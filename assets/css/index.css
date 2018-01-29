@@ -164,11 +164,11 @@ body{
 }
 .bottom-part{
 	color: white;
-	background-color: #000!important;
+	background-color: #666666!important;
 	padding-top: 64px!important;
 	padding-bottom: 64px!important;
 	text-align: center!important;
-	opacity: 0.60;
+	z-index: 2;
 }
 .bottom-part h1{
 	margin: 16px!important;
@@ -176,16 +176,17 @@ body{
 	font-family: "Montserrat", sans-serif;
 }
 .footer-class{
+	background: white!important;
 	padding-top: 64px!important;
 	padding-bottom: 64px!important;
 	text-align: center!important;
-	opacity: 0.60;
 	font-family: "Lato", sans-serif;
 }
 .icon-class{
 	padding-top: 32px!important;
 	padding-bottom: 32px!important;
 	font-size: 24px!important;
+	opacity: .7
 }
 .hover-opacity{
 	color: black!important;
@@ -195,6 +196,10 @@ body{
 }
 a{
 	color:inherit;
+}
+#div-1{
+	background: white!important;
+	z-index: 2!important;
 }
 
 @media screen and (max-width: 479px) {

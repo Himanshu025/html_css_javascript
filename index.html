@@ -27,22 +27,30 @@
 	<!-- header -->
 	<div id="div-1">
 		<header class="container-1">
-			<a class="item-button" id="loginClick">Login</a>
-			<h1 class="jumbo">START PAGE</h1>
+			<h1 class="jumbo">START PAGE</h1>						
+			<a class="item-button" id="loginClick">Feedback</a>
+			<table id="myTable">
+				<tbody>
+					<tr>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
 			<p class="paragraph"><input type="text" class="jumbo" id="user" ></p>
 			<div><img id="myImage" src="assets/images/pic_bulboff.gif" width="100" height="180"></div>
 			<button id="changeImage" class="button">Click Me</button>
 			<!-- login-part -->
 			<div  id="box" class="box" style="display: none">
-				<h2>Login</h2>
+				<h2>Feedback</h2>
 				<form id="login-form" >
 					<div class="inputBox">
-						<input id="username" type="text" name="username" required="required">
+						<input id="username" type="text" name="username" required="required" >
 						<label>username</label>
 					</div>
 					<div class="inputBox">
-						<input type="text" name="password" required="required">
-						<label>password</label>
+						<input id="comment" type="text" name="comment" required="required" >
+						<label>comment</label>
 					</div>
 					<input type="submit" name="" value="submit">
 				</form>
@@ -52,7 +60,7 @@
 		<div class="first-grid ">
 			<div class="content">
 				<h1>Lorem Ipsum</h1>
-				<h5 class="small-content">
+				<h5 class="small-content ">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 				</h5>
 				<p class="text-grey">
@@ -183,6 +191,6 @@
 </html>
 <script type="text/javascript">
 	jQuery(document).ready(function(){
-		var Def = new IND.Def();
+		var js = new IND.js();
 	});
 </script>

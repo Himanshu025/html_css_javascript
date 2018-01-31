@@ -1,55 +1,57 @@
 var IND = IND || {};
 
-IND.Def = function(){
+IND.js = function(){
 	this.initialize();
 }
-IND.Def.prototype = {
+IND.js.prototype = {
 	initialize:function(){
-		this.showContainer();
-		this.loginPopup();
-		this.formSubmit();
-		this.blowBulb();
-		this.sliderWindow();
+		this.handleContainer();
+		this.handleLoginPopup();
+		this.loginSubmitForm();
+		this.handleLightBulb();
+		this.handleSliderWindow();
 	},
-	showContainer:function(){
+	handleContainer:function(){
 		$('#homeClick').click(function(){
-			$('#div-1').css('display','block');	
-			$('#div-2').css('display','none');
-			$('#div-3').css('display','none');
+			$('#div-1').fadeIn(1000);
+			$('#div-2').fadeOut(1000);
+			$('#div-3').fadeOut(1000);
 			return;	
 		});
 		$('#aboutClick').click(function(){
-			$('#div-1').css('display','none');	
-			$('#div-2').css('display','block');
-			$('#div-3').css('display','none'); 
+			$('#div-1').fadeOut(1000);	
+			$('#div-2').fadeIn(1000);
+			$('#div-3').fadeOut(1000); 
 			return;	
 		});
 		$('#contactClick').click(function(){
-			$('#div-1').css('display','none');	
-			$('#div-2').css('display','none');
-			$('#div-3').css('display','block'); 
+			$('#div-1').fadeOut(1000);	
+			$('#div-2').fadeOut(1000);
+			$('#div-3').fadeIn(1000); 
 			return;	
 		});
 	},
-	loginPopup:function(){
+	handleLoginPopup:function(){
 		$('#loginClick').click(function(){
-			var current = $('#box').css('display');
-			if(current == "block"){
-				$('#box').css('display','none');
-			}
-			else{
-				$('#box').css('display','block');
-			}
+			var current = $('#box').fadeToggle(1000);
 		});
 	},
-	formSubmit:function(){
+	loginSubmitForm:function(){
+		self = this;
 		$('#login-form').submit(function(e){
 			e.preventDefault();
 			var username = $('#login-form #username').val();
-			$('#user').val(username);
+			var comment = $('#login-form #comment').val();
+			$('#myTable tbody').append('<tr class="child"><td>'+username+'</td></tr>');
+			$('#myTable tbody').append('<tr class="child"><td>'+comment+'</td></tr>');
+			$('#login-form')[0].reset();
+			self.closeThisPopup();
 		});
 	},
-	blowBulb:function(){
+	closeThisPopup:function(){
+		$('#box').fadeOut(1000);
+	},
+	handleLightBulb:function(){
 		$('#changeImage').click(function(){
 			if ($('#myImage').attr('src') == "assets/images/pic_bulboff.gif"){
 				$('#myImage').attr('src','assets/images/pic_bulbon.gif');
@@ -59,36 +61,34 @@ IND.Def.prototype = {
 			}
 		});
 	},
-	sliderWindow:function(){
+	handleSliderWindow:function(){
+		self = this;
 		var current = $('.mySlides').first().css('display','block');
+		self.handleLeftSliderClick(current);
+		self.handleRightSliderClick(current);
+	},
+	handleRightSliderClick:function(current){
 		$('#plusDivs').click(function(e){
-			e.preventDefault();
-			slideNext();
-		});
-		function slideNext()
-		{
 			$('.mySlides').css('display','none');
+			e.preventDefault();
 			if(current.next().length==0){
 				current = $('.mySlides').first().css('display','block');
 			}
 			else{
 				current = current.next().css('display','block');
 			}
-		}
-		$('#minusDivs').click(function(e)
-		{ 
-			e.preventDefault();
-			slidePrevious();
 		});
-		function slidePrevious()
-		{ 
+	},
+	handleLeftSliderClick:function(current){
+		$('#minusDivs').click(function(e){ 
 			$('.mySlides').css('display','none');
+			e.preventDefault();
 			if(current.prev().length==0){
 				current = $('.mySlides').last().css('display','block');
 			}
 			else{
 				current = current.prev().css('display','block');	
-			}
-		}
+			}		
+		});	
 	}
 }

@@ -68,28 +68,27 @@ IND.Def.prototype = {
 		function slideNext()
 		{
 			$('.mySlides').css('display','none');
-			if(current.next().length==0)
-			{
+			if(current.next().length==0){
 				current = $('.mySlides').first().css('display','block');
 			}
-			else
+			else{
 				current = current.next().css('display','block');
+			}
 		}
 		$('#minusDivs').click(function(e)
 		{ 
-      e.preventDefault();
-      slidePrevious();
+			e.preventDefault();
+			slidePrevious();
 		});
 		function slidePrevious()
 		{ 
-	    $('.mySlides').css('display','none');
-			if(current.prev().length==0)
-			{
+			$('.mySlides').css('display','none');
+			if(current.prev().length==0){
 				current = $('.mySlides').last().css('display','block');
 			}
-			else
+			else{
 				current = current.prev().css('display','block');	
+			}
 		}
 	}
 }
-

@@ -10,6 +10,16 @@ IND.js.prototype = {
 		this.loginSubmitForm();
 		this.handleLightBulb();
 		this.handleSliderWindow();
+		this.handleNavBar();
+	},
+	handleNavBar:function(){
+    $('#toggle').click(function(){
+      var current = $('#menu-item').css('display');
+      if (current == 'block') 
+        $('#menu-item').fadeOut(1000);
+      else
+        $('#menu-item').fadeIn(1000);
+    });
 	},
 	handleContainer:function(){
 		$('#homeClick').click(function(){
@@ -34,6 +44,9 @@ IND.js.prototype = {
 	handleLoginPopup:function(){
 		$('#loginClick').click(function(){
 			var current = $('#box').fadeToggle(1000);
+		});
+		$('#close-button').click(function(){
+      $('#box').fadeOut(1000);
 		});
 	},
 	loginSubmitForm:function(){

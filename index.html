@@ -17,7 +17,7 @@
 <body>
 	<!-- navbar -->
 	<div class="index-top">
-		<button onclick="showMenu()" id="toggle" class="toggle button"><i class="fa fa-home fa-fw fa-2x" aria-hidden="true"></i></button>
+		<button id="toggle" class="toggle button"><i class="fa fa-home fa-fw fa-2x" aria-hidden="true"></i></button>
 		<div class="menu-item" id="menu-item">
 			<a class="item-button item-home" id="homeClick">Home</a>
 			<a class="item-button" id="aboutClick" >About</a>
@@ -43,6 +43,7 @@
 			<!-- login-part -->
 			<div  id="box" class="box" style="display: none">
 				<h2>Feedback</h2>
+				<button id="close-button">x</button>
 				<form id="login-form" >
 					<div class="inputBox">
 						<input id="username" type="text" name="username" required="required" >
@@ -57,7 +58,7 @@
 			</div>
 		</header>
 		<!-- First Grid -->
-		<div class="first-grid ">
+		<div class="first-grid">
 			<div class="content">
 				<h1>Lorem Ipsum</h1>
 				<h5 class="small-content ">

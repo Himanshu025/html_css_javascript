@@ -13,40 +13,62 @@ IND.js.prototype = {
 		this.handleNavBar();
 	},
 	handleNavBar:function(){
-    $('#toggle').click(function(){
-      var current = $('#menu-item').css('display');
-      if (current == 'block') 
-        $('#menu-item').fadeOut(1000);
-      else
-        $('#menu-item').fadeIn(1000);
-    });
+		$('#toggle').click(function(){
+			var current = $('#menu-item').css('display');
+			if (current == 'block') 
+				$('#menu-item').fadeOut(1000);
+			else
+				$('#menu-item').fadeIn(1000);
+		});
 	},
 	handleContainer:function(){
-		$('#homeClick').click(function(){
-			$('#div-1').fadeIn(1000);
-			$('#div-2').fadeOut(1000);
-			$('#div-3').fadeOut(1000);
-			return;	
-		});
-		$('#aboutClick').click(function(){
-			$('#div-1').fadeOut(1000);	
-			$('#div-2').fadeIn(1000);
-			$('#div-3').fadeOut(1000); 
-			return;	
-		});
-		$('#contactClick').click(function(){
-			$('#div-1').fadeOut(1000);	
-			$('#div-2').fadeOut(1000);
-			$('#div-3').fadeIn(1000); 
-			return;	
-		});
+		if ( $(window).width() < 479) {      
+      $('#homeClick').click(function(){
+				$('#div-1').fadeIn(1000);
+				$('#div-2').fadeOut(1000);
+				$('#div-3').fadeOut(1000);
+				$('#menu-item').fadeOut(1000);	
+			});
+			$('#aboutClick').click(function(){
+				$('#div-1').fadeOut(1000);	
+				$('#div-2').fadeIn(1000);
+				$('#div-3').fadeOut(1000); 
+				$('#menu-item').fadeOut(1000);
+			});
+			$('#contactClick').click(function(){
+				$('#div-1').fadeOut(1000);	
+				$('#div-2').fadeOut(1000);
+				$('#div-3').fadeIn(1000); 
+				$('#menu-item').fadeOut(1000);
+			});
+		} 
+		else {
+			$('#homeClick').click(function(){
+				$('#div-1').fadeIn(1000);
+				$('#div-2').fadeOut(1000);
+				$('#div-3').fadeOut(1000);
+				return;	
+			});
+			$('#aboutClick').click(function(){
+				$('#div-1').fadeOut(1000);	
+				$('#div-2').fadeIn(1000);
+				$('#div-3').fadeOut(1000); 
+				return;	
+			});
+			$('#contactClick').click(function(){
+				$('#div-1').fadeOut(1000);	
+				$('#div-2').fadeOut(1000);
+				$('#div-3').fadeIn(1000); 
+				return;	
+			});
+		}   
 	},
 	handleLoginPopup:function(){
 		$('#loginClick').click(function(){
 			var current = $('#box').fadeToggle(1000);
 		});
 		$('#close-button').click(function(){
-      $('#box').fadeOut(1000);
+			$('#box').fadeOut(1000);
 		});
 	},
 	loginSubmitForm:function(){

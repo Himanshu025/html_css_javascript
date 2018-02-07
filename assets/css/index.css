@@ -253,10 +253,10 @@ a{
 		outline: 0;
 	}
 	.toggle:hover{
-		background-color: black;
+		background-color: white;
 	}
 	.toggle i{
-		color:white!important;
+		color:black!important;
 		padding:0!important;
 	}
 	.menu-item{
